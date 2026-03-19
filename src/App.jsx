@@ -76,15 +76,18 @@ const LogoSVG = ({ size = 40, textColor = "#111" }) => (
   </div>
 );
 
-/* ── Decorative S watermark ── */
-const SWatermark = ({ opacity = 0.06, right = true }) => (
-  <svg
-    style={{ position: "absolute", [right ? "right" : "left"]: -60, top: "50%", transform: "translateY(-50%)", pointerEvents: "none", zIndex: 0 }}
-    width={320} height={420} viewBox="0 0 320 420" fill="none"
-  >
-    <path d="M260 60 C260 60 60 60 60 130 C60 200 260 180 260 250 C260 320 60 320 60 360"
-      stroke={BLUE_DARK} strokeWidth="80" strokeLinecap="round" opacity={opacity} fill="none" />
-  </svg>
+/* ── Logo watermark (bottom-right of each section, like PDF) ── */
+const SWatermark = ({ opacity = 0.06 }) => (
+  <img
+    src="/logo.png"
+    alt=""
+    aria-hidden="true"
+    style={{
+      position: "absolute", bottom: -40, right: -40,
+      width: 320, height: 320, objectFit: "contain",
+      opacity, pointerEvents: "none", zIndex: 0,
+    }}
+  />
 );
 
 /* ── NAV ── */
@@ -198,20 +201,13 @@ function Hero() {
     }}>
       <SWatermark opacity={0.07} />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px", width: "100%", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-        <div style={{
-          display: "inline-block", background: BLUE_PALE, color: BLUE_DARK,
-          padding: "6px 16px", borderRadius: 20, fontSize: 13, fontWeight: 600,
-          letterSpacing: 1.5, marginBottom: 28, textTransform: "uppercase"
-        }}>Business Communication Advisory</div>
-        <h1 style={{
-          fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
-          fontSize: "clamp(52px, 8vw, 96px)", lineHeight: 0.95, color: BLUE_DARK,
-          marginBottom: 28, letterSpacing: -1,
-        }}>
-          YOUR<br />
-          <span style={{ color: BLUE_LIGHT }}>CLEAR PATH</span><br />
-          UPWARD
-        </h1>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 44 }}>
+          <img src="/logo.png" alt="SELOGAN" style={{ width: 160, height: 160, objectFit: "contain" }} />
+          <div style={{ textAlign: "left" }}>
+            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 96, letterSpacing: 4, color: BLUE_DARK, lineHeight: 1 }}>SELOGAN</div>
+            <div style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontSize: 24, letterSpacing: 5, color: BLUE_MID, textTransform: "uppercase" }}>Your Clear Path Upward</div>
+          </div>
+        </div>
         <p style={{
           fontSize: "clamp(16px, 2vw, 20px)", color: "#444", maxWidth: 540,
           lineHeight: 1.7, marginBottom: 44, fontWeight: 400,
@@ -315,7 +311,7 @@ const programs = [
 function Programs() {
   return (
     <section id="programs" style={{ background: BLUE_BG, padding: "100px 0", position: "relative", overflow: "hidden" }}>
-      <SWatermark opacity={0.05} right={false} />
+      <SWatermark opacity={0.05} />
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1, padding: "0 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 13, letterSpacing: 3, color: BLUE_LIGHT, marginBottom: 12, textTransform: "uppercase" }}>What We Offer</div>
@@ -553,7 +549,7 @@ const partners = [
 function Partners() {
   return (
     <section id="partners" style={{ background: BLUE_BG, padding: "100px 24px", position: "relative", overflow: "hidden" }}>
-      <SWatermark opacity={0.05} right={false} />
+      <SWatermark opacity={0.05} />
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 13, letterSpacing: 3, color: BLUE_LIGHT, marginBottom: 12, textTransform: "uppercase" }}>Trusted By</div>
@@ -589,11 +585,7 @@ function Contact() {
       background: `linear-gradient(150deg, ${BLUE_DARK} 0%, ${BLUE_MID} 60%, ${BLUE_LIGHT} 100%)`,
       padding: "100px 24px", position: "relative", overflow: "hidden", color: "#fff",
     }}>
-      {/* Watermark */}
-      <svg style={{ position: "absolute", right: -80, bottom: -80, opacity: 0.08, pointerEvents: "none" }} width={400} height={400} viewBox="0 0 400 400">
-        <path d="M300 60 C300 60 100 60 100 150 C100 240 300 210 300 300 C300 390 100 390 100 390"
-          stroke="#fff" strokeWidth="80" strokeLinecap="round" fill="none" />
-      </svg>
+      <SWatermark opacity={0.08} />
 
       <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1, textAlign: "center" }}>
         <div style={{
