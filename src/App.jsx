@@ -201,11 +201,11 @@ function Hero() {
     }}>
       <SWatermark opacity={0.07} />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px", width: "100%", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 44 }}>
-          <img src="/logo.png" alt="SELOGAN" style={{ width: 160, height: 160, objectFit: "contain" }} />
-          <div style={{ textAlign: "left" }}>
-            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 96, letterSpacing: 4, color: BLUE_DARK, lineHeight: 1 }}>SELOGAN</div>
-            <div style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontSize: 24, letterSpacing: 5, color: BLUE_MID, textTransform: "uppercase" }}>Your Clear Path Upward</div>
+        <div className="hero-brand" style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 44 }}>
+          <img src="/logo.png" alt="SELOGAN" style={{ width: "clamp(72px, 18vw, 160px)", height: "clamp(72px, 18vw, 160px)", objectFit: "contain", flexShrink: 0 }} />
+          <div style={{ textAlign: "left", minWidth: 0 }}>
+            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(36px, 12vw, 96px)", letterSpacing: 4, color: BLUE_DARK, lineHeight: 1 }}>SELOGAN</div>
+            <div style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontSize: "clamp(11px, 3.5vw, 24px)", letterSpacing: "clamp(2px, 1vw, 5px)", color: BLUE_MID, textTransform: "uppercase" }}>Your Clear Path Upward</div>
           </div>
         </div>
         <p style={{
