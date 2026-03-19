@@ -259,7 +259,6 @@ function About() {
     }}>
       <SWatermark opacity={0.05} />
       <div style={{ maxWidth: 800, margin: "0 auto", position: "relative", zIndex: 1, textAlign: "center" }}>
-        <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 13, letterSpacing: 3, color: BLUE_LIGHT, marginBottom: 16, textTransform: "uppercase" }}>About Selogan</div>
         <h2 style={{
           fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
           fontSize: "clamp(36px, 5vw, 64px)", color: BLUE_DARK, lineHeight: 1,
@@ -314,7 +313,6 @@ function Programs() {
       <SWatermark opacity={0.05} />
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1, padding: "0 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 13, letterSpacing: 3, color: BLUE_LIGHT, marginBottom: 12, textTransform: "uppercase" }}>What We Offer</div>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(36px, 5vw, 64px)", color: BLUE_DARK, lineHeight: 1 }}>
             PROGRAMS<br /><span style={{ color: BLUE_LIGHT }}>WE OFFER</span>
           </h2>
@@ -412,7 +410,6 @@ function CaseStudies() {
       <SWatermark opacity={0.05} />
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
-          <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 13, letterSpacing: 3, color: BLUE_LIGHT, marginBottom: 12, textTransform: "uppercase" }}>Real Results</div>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(36px, 5vw, 64px)", color: BLUE_DARK, lineHeight: 1 }}>
             CASE<br /><span style={{ color: BLUE_LIGHT }}>STUDIES</span>
           </h2>
@@ -552,7 +549,6 @@ function Partners() {
       <SWatermark opacity={0.05} />
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 13, letterSpacing: 3, color: BLUE_LIGHT, marginBottom: 12, textTransform: "uppercase" }}>Trusted By</div>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(36px, 5vw, 64px)", color: BLUE_DARK, lineHeight: 1 }}>
             OUR <span style={{ color: BLUE_LIGHT }}>PARTNERS</span>
           </h2>
@@ -588,11 +584,6 @@ function Contact() {
       <SWatermark opacity={0.08} />
 
       <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1, textAlign: "center" }}>
-        <div style={{
-          display: "inline-block", background: "rgba(255,255,255,0.15)", color: "#fff",
-          padding: "6px 16px", borderRadius: 20, fontSize: 13, fontWeight: 600,
-          letterSpacing: 2, marginBottom: 24, textTransform: "uppercase", backdropFilter: "blur(8px)"
-        }}>Get In Touch</div>
         <h2 style={{
           fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
           fontSize: "clamp(44px, 7vw, 80px)", lineHeight: 0.95, marginBottom: 20,
