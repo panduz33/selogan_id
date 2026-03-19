@@ -635,16 +635,16 @@ function Contact() {
 function Footer() {
   return (
     <footer style={{
-      background: BLUE_DARK, borderTop: `3px solid ${BLUE_LIGHT}`,
-      padding: "24px 32px",
+      background: "#fff", borderTop: `3px solid ${BLUE_LIGHT}`,
+      padding: "20px 32px",
       display: "flex", alignItems: "center", justifyContent: "space-between",
       flexWrap: "wrap", gap: 12,
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <img src="/logo.png" alt="SELOGAN" style={{ width: 32, height: 32, objectFit: "contain" }} />
-        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 18, letterSpacing: 2, color: "#fff" }}>SELOGAN</span>
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 18, letterSpacing: 2, color: BLUE_DARK }}>SELOGAN</span>
       </div>
-      <p style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", margin: 0 }}>
+      <p style={{ fontSize: 12, color: "#888", margin: 0 }}>
         © {new Date().getFullYear()} SELOGAN. All rights reserved.
       </p>
     </footer>
