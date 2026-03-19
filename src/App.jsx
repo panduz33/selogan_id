@@ -283,28 +283,28 @@ function About() {
 /* ── PROGRAMS ── */
 const programs = [
   {
-    icon: "🎯",
+    image: "/program-images/english-career.jpeg",
     title: "English for Career Growth",
     subtitle: "English Communication Advisory",
     desc: "A structured English development program designed for professionals who aim to advance their career, expand global opportunities, and communicate with confidence in strategic environments.",
     color: BLUE_LIGHT,
   },
   {
-    icon: "🏢",
+    image: "/program-images/hr-communication.jpeg",
     title: "HR Communication Advisory",
     subtitle: "Internal Communication Systems",
     desc: "Advisory program to strengthen internal communication structure, leadership messaging, and performance alignment within the organization.",
     color: "#2563c6",
   },
   {
-    icon: "📢",
+    image: "/program-images/marketing-branding.png",
     title: "Marketing & Branding Communication Advisory",
     subtitle: "Brand Messaging Strategy",
     desc: "Strategic guidance to refine market positioning, brand messaging, and communication direction so businesses can speak clearly to the right audience.",
     color: BLUE_MID,
   },
   {
-    icon: "💰",
+    image: "/program-images/sales-communication.jpeg",
     title: "Sales Communication Advisory",
     subtitle: "Revenue Communication",
     desc: "Advisory support to design structured sales communication that improves conversion, strengthens negotiation confidence, and builds a consistent sales pipeline.",
@@ -355,11 +355,10 @@ function Programs() {
                 position: "absolute", top: 0, left: 0, right: 0, height: 4,
                 background: prog.color, borderRadius: "20px 20px 0 0"
               }} />
-              <div style={{
-                width: 56, height: 56, borderRadius: 14, fontSize: 26,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                background: `${prog.color}18`, marginBottom: 20,
-              }}>{prog.icon}</div>
+              <img src={prog.image} alt={prog.title} style={{
+                width: "100%", height: 160, objectFit: "cover",
+                borderRadius: 12, marginBottom: 20, display: "block",
+              }} />
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, color: prog.color, textTransform: "uppercase", marginBottom: 8 }}>{prog.subtitle}</div>
               <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 22, color: BLUE_DARK, marginBottom: 16, lineHeight: 1.2 }}>{prog.title}</h3>
               <p style={{ fontSize: 14, color: "#666", lineHeight: 1.7 }}>{prog.desc}</p>
