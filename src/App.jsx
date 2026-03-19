@@ -540,14 +540,14 @@ function CaseStudies() {
 
 /* ── PARTNERS ── */
 const partners = [
-  { name: "lulusnegeri.com", sub: "Teman Sukses Lulus PTN", emoji: "🎓" },
-  { name: "OZA Premium", sub: "Preanger 1835 Planters", emoji: "🍵" },
-  { name: "Selamat Pagi Korea", sub: "", emoji: "🇰🇷" },
-  { name: "JMC Indonesia", sub: "", emoji: "📋" },
-  { name: "Lucky Cheese", sub: "Korean Cheese Coin Pancake", emoji: "🧀" },
-  { name: "eduLab", sub: "", emoji: "🔬" },
-  { name: "JOGIIA", sub: "", emoji: "💎" },
-  { name: "Alfa Gamma", sub: "Pilihan Pelajar Berprestasi", emoji: "⭐" },
+  { name: "lulusnegeri.com", sub: "Teman Sukses Lulus PTN", logo: "/partner-logos/lulusnegeri.png" },
+  { name: "OZA Premium", sub: "Preanger 1835 Planters", logo: "/partner-logos/oza-premium.png" },
+  { name: "Selamat Pagi Korea", sub: "", logo: "/partner-logos/selamat-pagi-korea.png" },
+  { name: "JMC Indonesia", sub: "", logo: "/partner-logos/jmc-indonesia.jpeg" },
+  { name: "Lucky Cheese", sub: "Korean Cheese Coin Pancake", logo: "/partner-logos/lucky-cheese.png" },
+  { name: "eduLab", sub: "", logo: "/partner-logos/edulab.png" },
+  { name: "JOGIIA", sub: "", logo: "/partner-logos/jogiia.png" },
+  { name: "Alfa Gamma", sub: "Pilihan Pelajar Berprestasi", logo: "/partner-logos/alfa-gamma.png" },
 ];
 
 function Partners() {
@@ -571,7 +571,7 @@ function Partners() {
                 transition: "all 0.2s",
               }}
             >
-              <div style={{ fontSize: 36, marginBottom: 12 }}>{p.emoji}</div>
+              <img src={p.logo} alt={p.name} style={{ width: "100%", height: 80, objectFit: "contain", marginBottom: 12 }} />
               <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 18, color: BLUE_DARK, lineHeight: 1.2 }}>{p.name}</div>
               {p.sub && <div style={{ fontSize: 11, color: "#888", marginTop: 4 }}>{p.sub}</div>}
             </div>
