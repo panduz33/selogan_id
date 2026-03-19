@@ -65,23 +65,10 @@ function GlobalStyles() {
   );
 }
 
-/* ── SVG Logo (reconstructed from brand) ── */
+/* ── Logo ── */
 const LogoSVG = ({ size = 40, textColor = "#111" }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-    <svg width={size} height={size} viewBox="0 0 80 80" fill="none">
-      <defs>
-        <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#4a6cf7" />
-          <stop offset="100%" stopColor="#1a2b6b" />
-        </linearGradient>
-      </defs>
-      {/* S shape */}
-      <path d="M52 18 C52 18 28 18 28 30 C28 42 52 38 52 50 C52 62 28 62 28 62"
-        stroke="url(#sg)" strokeWidth="13" strokeLinecap="round" fill="none" />
-      {/* Arrow */}
-      <path d="M44 10 L56 22" stroke="#4a6cf7" strokeWidth="7" strokeLinecap="round" />
-      <path d="M56 22 L56 12 M56 22 L46 22" stroke="#4a6cf7" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <img src="/logo.png" alt="SELOGAN" width={size} height={size} style={{ objectFit: "contain" }} />
     <div>
       <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: size * 0.55, letterSpacing: 1, color: textColor, lineHeight: 1 }}>SELOGAN</div>
       <div style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 400, fontSize: size * 0.22, letterSpacing: 2, color: BLUE_MID, lineHeight: 1.2 }}>YOUR CLEAR PATH UPWARD</div>
