@@ -626,13 +626,28 @@ function Contact() {
           </a>
         </div>
 
-        {/* Footer logo */}
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.2)", paddingTop: 40, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <LogoSVG size={32} textColor="#fff" />
-          <p style={{ fontSize: 13, opacity: 0.6 }}>© {new Date().getFullYear()} SELOGAN. Your Clear Path Upward.</p>
-        </div>
       </div>
     </section>
+  );
+}
+
+/* ── FOOTER ── */
+function Footer() {
+  return (
+    <footer style={{
+      background: BLUE_DARK, borderTop: `3px solid ${BLUE_LIGHT}`,
+      padding: "24px 32px",
+      display: "flex", alignItems: "center", justifyContent: "space-between",
+      flexWrap: "wrap", gap: 12,
+    }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <img src="/logo.png" alt="SELOGAN" style={{ width: 32, height: 32, objectFit: "contain" }} />
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: 18, letterSpacing: 2, color: "#fff" }}>SELOGAN</span>
+      </div>
+      <p style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", margin: 0 }}>
+        © {new Date().getFullYear()} SELOGAN. All rights reserved.
+      </p>
+    </footer>
   );
 }
 
@@ -699,6 +714,7 @@ export default function App() {
       <CaseStudies />
       <Partners />
       <Contact />
+      <Footer />
       <BackToTop />
     </div>
   );
